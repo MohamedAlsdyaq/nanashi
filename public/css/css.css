@@ -1,0 +1,358 @@
+body{
+ font-family: 'Raleway', sans-serif;
+    height: 100%;
+}
+.home_page_divs{
+    margin-bottom: 50px;
+}
+.blank_width{
+    width: 100px;
+}
+.home_page{
+    margin-bottom: 100%;
+}
+.landing{
+    background-color: white;
+    padding: 10%;
+    margin-top: -7%;
+    margin-bottom: 10%;
+}
+.btn{
+    height: 40px;
+}
+.textarea_button{
+    margin-top: 0.5%
+}
+.achevment-img{
+  position: relative; 
+ opacity: 0.6;
+    
+}
+.achevment-text{
+    position: absolute;
+    color: white;
+   text-align: center;
+    margin-top: -12%;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+}
+#buttons{
+    display: none;
+}
+.btn{
+    outline:  none;
+}
+#edit_button{
+    opacity: 0.7;   
+}
+
+#links{
+     color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.page{
+    padding-bottom: 15%;
+}
+.footer{
+    background-color: #e6e6e6;
+    bottom:  0%;
+    padding: 1%;
+    
+}
+.login{
+    margin-top: 6%;
+}
+.avatar{
+    height: 100px;
+    width: 100px;
+    border-radius: 10%;
+}
+.white_text{
+    color:  white;
+     font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; 
+}
+textarea{
+    resize: none;
+    outline: none;
+}
+.header{
+        padding-top: 25%;
+        padding-bottom: 2%;
+        margin-bottom: 5%;
+        margin-top: -3%;
+        left:     0;
+        right:     0;
+        top:      0;
+        opacity: 0.6;
+}
+
+#notification_li{
+    position:relative
+        }
+        
+#notificationContainer {
+        background-color: #fff;
+        border: 1px solid rgba(100, 100, 100, .4);
+        -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+        overflow: visible;
+        position: absolute;
+        top: 30px;
+        margin-left: -170px;
+        width: 400px;
+        z-index: 2;
+        display: none;
+}
+#notificationContainer:before {
+
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            color: transparent;
+            border: 10px solid black;
+            border-color: transparent transparent white;
+            margin-top: -20px;
+            margin-left: 188px;
+}
+        
+#notificationTitle {
+        z-index: 1000;
+        font-weight: bold;
+        text-align: center;
+        padding: 8px;
+        font-size: 13px;
+        background-color: #ffffff;
+        width: 384px;
+        border-bottom: 1px solid #dddddd;
+}
+#notificationsBody {
+        height: 2px;
+       
+        padding: 33px 0px 0px 0px !important;
+        min-height:300px;
+}
+#notificationFooter {
+        background-color: #e9eaed;
+        text-align: center;
+        font-weight: bold;
+        padding: 8px;
+        font-size: 12px;
+        border-top: 1px solid #dddddd;
+}
+#notification_count {
+        padding: 3px 7px 3px 7px;
+        background: #cc0000;
+        color: #ffffff;
+        font-weight: bold;
+        margin-left: 77px;
+        border-radius: 9px;
+        position: absolute;
+        margin-top: -11px;
+        font-size: 11px;
+}
+        .noti2{
+                
+        align-content: center;
+        background-color: white;
+        width: 400px; 
+        height: 65px;
+        float: right;
+   
+  
+}
+    
+        #noti2{
+        padding-bottom: 30px;
+        margin-top: -30px;
+            
+        }
+        .ago{
+        top: -20px;
+        font-size: 10px;
+        margin-bottom: 20px;
+        color: darkgrey;
+        }
+
+/*
+******************
+*
+*       
+******************
+*/
+
+.search{
+    border: none;
+    outline: none;
+}
+
+/*
+***********************
+*
+*
+***************/
+
+                      
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; 
+    bottom: 30px; 
+}
+
+#snackbar.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/*
+******************************
+*                            *
+*                            * 
+*                            *
+*    HERE IS STYLING FOR     *
+*      MOVIE.NLADE.PHP       *
+*                            *
+*                            *
+******************************
+*/
+.statistics{
+    padding: 2%;
+}
+.img{
+    margin-left: -1%;
+}
+.undelined{
+    text-decoration: underline;
+}
+.borderd{
+    border-radius: 2px;
+    border-color: black;
+}
+.movie_container{
+    margin-left: 2%;
+    margin-right: 2%
+}
+.small{
+    margin-top: -2%;
+    margin-bottom: 3%;
+    padding-bottom: 2%;
+}
+.rounded{
+        border-radius: 2px;
+        background-color: white;
+        padding-top: 10px;margin-left: -20px; padding-bottom:10px;
+        margin: 0.5%;
+        
+    }
+.no_margin_bottom{
+    margin-bottom: 0%;
+}
+#post{
+    /* this is the post body */
+    margin-top: 0.5%;padding-top: 0.5%;
+    font-size: 90%;
+}
+.post_container{
+    padding-bottom: 2%; margin-bottom: 10%;
+}
+
+/*
+*******************
+*
+* List.blade.php
+*********************1
+*/
+
+.bar{
+    background-color: #f9fafa;
+    border-bottom: #f9fafa;
+    width: 100%;
+    text-align: center;
+    padding: 1.5%;
+    margin-bottom: 0px;
+}
+.one_list_tag{
+    width: 100%;
+    background-color: white;
+    margin-top: 0px;
+    
+}
+.search_bar{
+    min-height: 250px;
+    margin-bottom: auto;
+}
+.search_bar_label{
+    font-size: 24px;
+    color: #8c8c8c
+}
+.hr_no_margin{
+    margin: 2px;;
+}
+/****************
+SEARCH A MOVIE 
+***********/
+
+.main_heading{
+    bottom: 50px;
+}
+.margin-xm{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+.margin-xs{
+    margin-top: 4px;
+    
+}
+movie_name{
+    font-size: 10px;
+    pointer-events: none;
+    cursor: default;
+}
+.custom_card{
+        border-radius: 5px;
+        background-color: white;
+        width: 120px;
+        min-height: 225px;
+        float: left;
+        margin: 5px;
+        overflow: hidden;
+        margin-bottom: 20px;
+}
+
+.custom_font{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.list_tag{
+    margin-top: 4px;
+}
+.center{
+       width: 50%;
+    margin: 0 auto; 
+}
+.panel-body{
+    padding: 0;
+}
+.last_updates{
+    margin-top: 4px;
+}
+.no_anchor{
+     
+    cursor: default;
+    color: darkgrey
+}
