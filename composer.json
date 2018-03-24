@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "Nanashi",
+    "description": "The Movies Social Network.",
+    "keywords": ["nanashi", "movies"],
     "license": "MIT",
     "type": "project",
     
@@ -11,9 +11,11 @@
         "laravel/framework": "5.3.*",
         "illuminate/html": "^5.0",
         "laravelcollective/html": "^5.3",
-        "graphaware/neo4j-php-client": "^4.0@alpha",
         "consoletvs/charts": "^2.0",
-        "intervention/image": "^2.3"
+        "intervention/image": "^2.3",
+        "doctrine/dbal": "^2.5",
+        "php-tmdb/laravel": "~1.0",
+        "predis/predis": "~1.1@dev"
         
     },
     "require-dev": {
