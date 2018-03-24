@@ -7,72 +7,87 @@ use App\Tweet as Tweet;
 use App\User as User;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
-use GraphAware\Neo4j\Client\ClientBuilder;
+use App\Http\Controllers\PostController as Posts;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redis;
+Redis::connection();
 
- 
+
 class MovieController extends Controller
 {
     //
-    
-    public function show($id){
-        
-  $posts = Tweet::with('user')->where([
-     ['movie_id', '=', $id],
-      ['type', '=', null]
-      ])->get();
-        
 
-$client = ClientBuilder::create()
- ->addConnection('default', 'http://nanashi:b.VAIonp8e2S89.au9RqRmt45XGFqho@hobby-njmfcaohojekgbkeengnpcol.dbs.graphenedb.com:24789') 
-    ->build();
-        
-$query = "MATCH (link:Link)-[:LINK]->(movie:Movie)
-WHERE link.tmdbId = {$id}
-MATCH (x)<-[:HAS_GENRE]-(ee:Movie{id:movie.id})
-// collect genres so only one result row so far
-WITH ee, COLLECT(x) as genres
-MATCH (ee)<-[:RATED{rating: 5}]-()-[:RATED{rating: 5}]->(another_movie)
-WITH genres,  another_movie
-// don't match on genre until previous query filters results on rating
-MATCH (another_movie)-[:HAS_GENRE]->(y:Genre)
-WITH genres, another_movie, COLLECT(y) as gs
-WHERE size(genres) <= size(gs) AND ALL (genre IN genres WHERE genre IN gs)
-WITH another_movie 
-//maMATCH (another_movie)-[:LINK]->(l2:Link)tch external links
-MATCH (another_movie)<-[:LINK]-(external:Link)
-RETURN DISTINCT another_movie, external
-";
+    public function get_posts( $id )
+    {
 
-        $recommended = false;        
-$result = $client->run($query)->records();
-      //dd($result);
-foreach($result as $record) {
-    
-if($record->get('external')->hasValue('tmdbId')){
-   $recommended = $record->get('external')->value('tmdbId');
-    break;
+        return Posts::movie_posts ( $id );
+
     }
-else 
-        continue;
-    }        
-        
 
-        return view('movie')->with([
-            'posts' => $posts,
-            'recommended' => $recommended
-                ]);
-            }
-    
-    public function search(){
-      // $query = Request::input('search');
- $q = Input::get ( 'q' );
+    /**
+     * @param $id
+     * @return View
+     */
+    public function show( $id )
+    {
 
-        return view('search')->with('movie_name', $q);
+
+        $posts = $this->get_posts ( $id );
+        $recommended = false;
+        Redis::zincrby ( 'recent' , 1 , $id );
+
+
+        return view ( 'movie' )->with ( [
+            'posts' => $posts ,
+            'recommended' => 862
+        ] );
     }
-    
-    public function browse($id){
-        
-        return view('browse')->with('id', $id);
-        
+
+    /*
+
+    @@ Param a string to be searched
+    @@ Returns object  of all matching string names
+    */
+    public function search()
+    {
+        // $query = Request::input('search');
+        $q = Input::get ( 'q' );
+
+        return view ( 'search' )->with ( 'movie_name' , $q );
     }
+
+
+    public function browse( $id )
+    {
+
+        return view ( 'browse' )->with ( 'id' , $id );
+
+    }
+
+    public static function TopMovie( $id )
+    {
+
+        return DB::select ( "SELECT lists.movie_id, COUNT(lists.movie_id) AS magnitude,   b.*
+                    FROM lists 
+                    LEFT JOIN
+                       (
+                       SELECT * FROM movies
+                       ) b
+                       ON b.id = lists.movie_id
+                    GROUP BY lists.movie_id
+                    ORDER BY magnitude DESC
+                    LIMIT 6
+                        " );
+    }
+
+    /**
+     * @return cached Trending
+     *
+     */
+    public static function LatestUpdates()
+    {
+        return Redis::zrevrange ( 'recent' , 0 , 2 );
+    }
+
+
 }

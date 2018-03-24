@@ -49,7 +49,7 @@ class PostController extends Controller
         $tweet->tweet = $request->input('comment');
         $tweet->user_id = Auth::user()->id;
         $tweet->name = Auth::user()->name;
-        
+        $tweet->save();
     if($request->has('movie_name')){
 
         // check if movie in db, if not insert it
@@ -98,6 +98,13 @@ $movie = Movie::firstOrCreate(
         
     }
 
+    public static function movie_posts($movie_id){
+
+        return Tweet::with('user')->where([
+        ['movie_id', '=', $movie_id],
+        ['type', '=', null]
+        ])->get();
+    }
     /**
      * Show the form for editing the specified resource.
      *

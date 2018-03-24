@@ -1,10 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
 
 class Helper {
-
-
 public function convertMinutesToDays($time) {
       
     if ($time < 1) {

@@ -1,0 +1,9 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Users/kira/vagrant/nanashi/gulpfile.js",
+        "C:/Users/kira/vagrant/nanashi/public/js/textarea.js",
+        "C:/Users/kira/vagrant/nanashi/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/respond.min.js",
+        "C:/Users/kira/vagrant/nanashi/public/js/search.js",
+        "C:/Users/kira/vagrant/nanashi/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/nv.d3.min.js"
+    ]
+}

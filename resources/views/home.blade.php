@@ -10,7 +10,7 @@
     <div class="container-fluid">
         <div class="col-sm-9">        
             <div class="col-sm-12">
-             <h4>Box Office:</h4> 
+             <h4>Box Office</h4> 
                 <hr class="hr_no_margin">
                 
            <div id="loop"></div>
@@ -26,64 +26,63 @@
             
                
                 <br><br>
-                <div class="">
-                <h4 class="text-center">Trending</h4>
-                    <hr class="hr_no_margin">
-                 <div class="col-sm-12 rounded">
-                @foreach($top as $top)    
-                    
-               <div class="col-sm-2">
-              <a href="/movie/{{$top->movie_id}}" >  
-               <img width="80" height="120" src="{{$top->movie_pic}}" >
-                   </a>
-                   
-                    <a href="/movie/{{$top->movie_id}}" >  
-                   <h6>{{$top->movie_name}}</h6>
-                   </a>
-                </div>
-                @endforeach
-                </div>   
-                </div>
+         <div class="col-sm-12">
+            <h4>Upcoming</h4> 
+            <hr class="hr_no_margin">
+
+            <div id="upcoming"></div>
+
+        </div> 
+  <br><br>
+         <div class="col-sm-12">
+            <h4>Highest Rated Movies</h4> 
+            <hr class="hr_no_margin">
+
+            <div id="rated"></div>
+
+        </div> 
+
                 
         </div>
            
             
-        <div class="col-sm-3">
-            
-            <div class="panel panel-default">
-                <div class="panel-heading">Recommended for you..
-                    </div>
-                    <div class="panel-body">  
-                        
-                        <div id="people_also_liked">    </div>
-                        
-                    </div>
-            </div>
-            
-            <div class="panel panel-default">
-                <div class="panel-heading">Who To Follow..
-                    </div>
-                    <div class="panel-body">  
-                            <div id="fsuggest"></div>
-                        
-                </div>
-            </div>
+        <div class="categories_box col-sm-3">
+           
             
              <div class="panel panel-default">
-                <div class="panel-heading">Recent Update </div>
-                    <div class="panel-body">  
-                        @foreach($updates as $update)   
-                        <div class="last_updates col-sm-11">
-                            <div class="col-sm-3"> <img class="rounded-img" width="50" height="50" src="/storage/{{$update->id.'/'.$update->pic}}"></div>
-                             <div class="col-sm-9">
-                            <h6><a href="/profile/{{$update->user2}}">{{$update->name}}</a> has watched <a href="/movie/{{$update->id}}">{{$update->movie_name}}</a></h6>
-                            <h6 class="text-muted">rated it {{$update->score}}/5</h6>
-                        </div>
-                     </div>
-                        <hr class="hr_no_margin">
-                       @endforeach 
+                <div class="panel-heading">Categories </div>
+                <hr class="hr_no_margin">     
+            <div class="panel-body"> 
+
+                <div class="col-sm-6">
+                    <p class="text-center black" ><a class="black" href="/browse/28">Action </a>
+                    <p class="text-center black" ><a class="black" href="/browse/12">Adventure </a>
+                    <p class="text-center black" ><a class="black" href="/browse/16">Animation </a>
+                    <p class="text-center black" ><a class="black" href="/browse/35"> Comedy</a>
+                    <p class="text-center black" ><a class="black" href="/browse/80"> Crime</a>
+                    <p class="text-center black" ><a class="black" href="/browse/99">Documentary </a>
+                    <p class="text-center black" ><a class="black" href="/browse/18">Drama </a>
+                    <p class="text-center black" ><a class="black" href="/browse/10751"> Family</a>
+                    <p class="text-center black" ><a class="black" href="/browse/14">Fantasy </a>
+
+
+
                 </div>
-            </div>
+                <div class="col-sm-6">
+                    <p class="text-center black" ><a class="black" href="/browse/36"> History</a>
+                    <p class="text-center black" ><a class="black" href="/browse/10402"> Music </a>
+                    <p class="text-center black" ><a class="black" href="/browse/9648"> Mystery</a>
+                    <p class="text-center black" ><a class="black" href="/browse/878"> Sci-Fi</a>
+                    <p class="text-center black" ><a class="black" href="/browse/10752"> War</a>
+                    <p class="text-center black" ><a class="black" href="/browse/37">Western </a>
+                    <p class="text-center black" ><a class="black" href="/browse/53">Triller </a>
+                    <p class="text-center black" ><a class="black" href="/browse/27"> Horror </a>
+                    <p class="text-center black" ><a class="black" href="/browse/1077"> TV Movie </a>
+                </div>
+
+                </div>
+                
+             </div>
             
             
         </div>

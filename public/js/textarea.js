@@ -16,9 +16,9 @@ function collapse(){
     $('#buttons').hide();
 }    
 function toast(){
-            var x = document.getElementById("snackbar")
-            x.className = "show";
-            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+           // var x = document.getElementById("snackbar")
+            //x.className = "show";
+            //setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
             collapse();
 }
 /*****************************************
@@ -28,11 +28,7 @@ function toast(){
 *                                        *
 *                                        *
 ******************************************/
-$.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-}); 
+ 
 $(document).on('click', '#save', function(e){
  e.preventDefault();
 add_movie_and_post();
@@ -46,16 +42,25 @@ function add_movie_and_post(){
     
 var post = $('#post').serialize();
     console.log(post);
+$.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+}); 
     
     $.ajax({
         url: '/tweet',
         data: post,
         type: 'POST',
+        datatype: 'JSON',
         success: function(d){
             console.log(d);
             $('#comment').val('');
             collapse();
             toast();
+        },
+        catch: function(e){
+            console.log(e);
         }
         
     });   

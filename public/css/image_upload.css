@@ -1,0 +1,12 @@
+body{
+
+	background-color: #f8f8f8;
+	overflow: hidden;
+
+}
+
+.center{
+       width: 50%;
+    margin: 0 auto; 
+
+}

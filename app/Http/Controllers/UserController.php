@@ -52,19 +52,20 @@ class UserController extends Controller
  }
            
        
+ $are_we_friends = false;       
         
-        
-
+if(isset(Auth::user()->id)){
 $are_we_friends = Friend::where([
     'user1' => Auth::user()->id, 'user2' => $id
         ])->get();
-        
+        }
         
         
         $data = User::find($id); 
         /*
         if none display 404
         */
+        if(isset(Auth::user()->id))
 $me = Auth::user()->id;
  $statistics = DB::select("SELECT lists.movie_id, movies.movie_length
                         FROM lists 
@@ -75,7 +76,7 @@ $me = Auth::user()->id;
       foreach($statistics as $s){
           $sum += $s->movie_length;
       }
-      $sum =    round(app('App\Http\Controllers\Helper')->convertMinutesToDays($sum), 2);
+      $sum =     round(app('App\Http\Controllers\Helper')->convertMinutesToDays($sum), 2);
 
         return View('profile', [
             'profile_owner' => $data,
@@ -118,20 +119,22 @@ return  $top_movies = DB::select("SELECT id,name,pic FROM users
     
 }
     
-    public function edit(Request $request){
+    public function upload(Request $request){
 
-      if($request->hasFile('avatar')){
-    		$avatar = $request->file('avatar');
+      if($request->hasFile('image')){
+    		$avatar = $request->file('image');
     		$filename = time() . '.' . $avatar->getClientOriginalExtension();
-    		Image::make($avatar)->resize(300, 300)->save( public_path('storage\\'.Auth::user()->id.'\\' . $filename ) );
+         Storage::makeDirectory(Auth::user()->id);
+
+    		Image::make($avatar)->save( public_path('storage/'.Auth::user()->id.'/' . $filename ) );
           
     		$user =  User::find(Auth::user()->id);
             
     		$user->pic = $filename;
     		$user->save();
-           header('Location: /profile/'.Auth::user()->id);
+     
     	}
-       
+     return redirect('helpers/out');
     }
     
     

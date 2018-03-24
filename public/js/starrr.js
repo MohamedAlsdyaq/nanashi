@@ -55,7 +55,7 @@ function add_to_list(){
     
    var data = {
     score: $('#score').val(), tag: tag,
-   movie_id: $('#movie_id').val()
+   movie_id: $('.movie_id').val()
     }
        
 $.ajaxSetup({

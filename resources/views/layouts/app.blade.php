@@ -12,15 +12,15 @@
 <title>{{ config('app.name', 'Laravel') }}</title>
 
 <!-- Styles -->
-
+<script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="/css/app.css" rel="stylesheet">
 <link href="/css/css.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 <!-- Scripts -->
-<script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-    
+
 <script   src="/js/notifications.js"></script>
 <script>
 window.Laravel = <?php echo json_encode([
@@ -30,7 +30,7 @@ window.Laravel = <?php echo json_encode([
 </head>
 <body>
 <div id="app">
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="hd navbar navbar-default navbar-static-top">
 <div class="container">
 <div class="navbar-header">
 
@@ -49,7 +49,7 @@ Nanashi
 
 </div>
 
-<div class="collapse navbar-collapse" id="app-navbar-collapse">
+<div class="hd collapse navbar-collapse" id="app-navbar-collapse">
 <ul class="nav navbar-nav">
 &nbsp;
 
@@ -189,7 +189,7 @@ Nanashi
     <div class="footer">
     
        
-        © 2016 m.k Inc. <a class="no_anchor" href="/privacy">Privacy </a>  Contact
+        © 2016 Nanashi Inc. <a class="no_anchor" href="/privacy">Privacy </a>  Contact
        
         
     

@@ -4,7 +4,7 @@
 
 <div style="display:none"> 
 {!! Form::textarea('movie_name','',  array('id'=>'movie_name')) !!}  
-{!! Form::textarea('movie_id','',  array('id'=>'movie_id')) !!}  
+{!! Form::textarea('movie_id','',  array('class'=>'movie_id')) !!}  
 {!! Form::textarea('movie_pic','',  array('id'=>'movie_pic')) !!}  
 {!! Form::textarea('movie_g1','',  array('id'=>'movie_g1')) !!}  
 {!! Form::textarea('movie_g2','',  array('id'=>'movie_g2')) !!}  
@@ -22,7 +22,7 @@
 
 
 <div id="buttons"> 
-{!! Form::button('post', array('id' => 'save', 'class'=>'textarea_button btn btn-success', 'onClick' => 'toast()')) !!}
+{!! Form::button('post', array('id' => 'save', 'class'=>'no_background textarea_button btn btn-success', 'onClick' => 'toast()')) !!}
 
 {!! Form::button('cancle', array('class'=>'textarea_button btn btn-link', 'onClick' => 'collapse()' )) !!}
 </div>
