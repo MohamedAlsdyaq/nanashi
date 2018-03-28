@@ -10,12 +10,26 @@ use Illuminate\Support\Facades\Input;
 use App\Http\Controllers\PostController as Posts;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
-Redis::connection();
+use Auth;
+
 
 
 class MovieController extends Controller
 {
     //
+
+    public static function connect(){
+        $token  = new \Tmdb\ApiToken('54f297aa644bf4f27044771fc75cbb64');
+        return new \Tmdb\Client($token);
+    }
+
+    /**
+     * @param $id
+     */
+    public static function get_movie( $id ){
+        $client = MovieController::connect();
+        return  $client->getMoviesApi()->getMovie( $id );
+    }
 
     public function get_posts( $id )
     {
@@ -34,7 +48,12 @@ class MovieController extends Controller
 
         $posts = $this->get_posts ( $id );
         $recommended = false;
-        Redis::zincrby ( 'recent' , 1 , $id );
+        $id = (int)$id;
+        if($id > 0)
+           Redis::zincrby ( 'Trending' , 1 , $id );
+
+        if(isset(Auth::user()->id) && $id > 0)
+            Redis::sadd (Auth::user()->id , $id );
 
 
         return view ( 'movie' )->with ( [
@@ -64,20 +83,13 @@ class MovieController extends Controller
 
     }
 
-    public static function TopMovie( $id )
+    /**
+     * @return mixed
+     */
+    public static function recent( )
     {
 
-        return DB::select ( "SELECT lists.movie_id, COUNT(lists.movie_id) AS magnitude,   b.*
-                    FROM lists 
-                    LEFT JOIN
-                       (
-                       SELECT * FROM movies
-                       ) b
-                       ON b.id = lists.movie_id
-                    GROUP BY lists.movie_id
-                    ORDER BY magnitude DESC
-                    LIMIT 6
-                        " );
+        return Redis::SMEMBERS (  Auth::user()->id );
     }
 
     /**
@@ -86,7 +98,7 @@ class MovieController extends Controller
      */
     public static function LatestUpdates()
     {
-        return Redis::zrevrange ( 'recent' , 0 , 2 );
+        return Redis::zrevrange ( 'Trending' , 1 , -1 );
     }
 
 

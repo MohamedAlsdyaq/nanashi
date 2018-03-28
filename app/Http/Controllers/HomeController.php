@@ -7,6 +7,8 @@ use App\m_List as m_List;
 use Illuminate\Support\Facades\DB;
 use Auth;
 use App\Http\Controllers\MovieController as Movie;
+use tmdb;
+
 $client = new \GuzzleHttp\Client();
 
 
@@ -43,16 +45,26 @@ class HomeController extends Controller
     {
        // $top = m_List::whereCreatedAt()
     
-$top_movies = $this->get_top_movies();
-$latest_updates = $this->get_latest_updates();
+$trending = MovieController::LatestUpdates();
+$recent = MovieController::recent();
 
+$Trend  = $recent_view = array();
+
+if(count($trending) > 0)
+    for($i=0; $i<count($trending); $i++){$Trend[$i] = MovieController::get_movie( $trending[ $i ] ); }
+
+if(count($recent) > 0)
+    for($i=1; $i<count($recent); $i++){ $recent_view[$i] = MovieController::get_movie( $recent[ $i ] ); }
+
+
+        // dd($s);
       //return $top_movies;
         return view('home', (
             [
 
                 'recommended'=> false,
-                'top'=> $top_movies,
-                'updates'=> $latest_updates
+                'trendings'=> $Trend,
+                'recents'=> $recent_view
             ]
                 )
                    

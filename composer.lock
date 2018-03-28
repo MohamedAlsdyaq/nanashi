@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "42fafc53afb260db01ca42e95fad93b9",
+    "content-hash": "f047c8001307e8fbc6dcc7057f6cdcc8",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -600,206 +600,6 @@
             "time": "2014-09-09T13:34:57+00:00"
         },
         {
-            "name": "elasticsearch/elasticsearch",
-            "version": "v5.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/elastic/elasticsearch-php.git",
-                "reference": "50e5b1c63db68839b8acc1f4766769570a27a448"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/50e5b1c63db68839b8acc1f4766769570a27a448",
-                "reference": "50e5b1c63db68839b8acc1f4766769570a27a448",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/ringphp": "~1.0",
-                "php": "^5.6|^7.0",
-                "psr/log": "~1.0"
-            },
-            "require-dev": {
-                "cpliakas/git-wrapper": "~1.0",
-                "doctrine/inflector": "^1.1",
-                "mockery/mockery": "0.9.4",
-                "phpunit/phpunit": "^4.7|^5.4",
-                "sami/sami": "~3.2",
-                "symfony/finder": "^2.8",
-                "symfony/yaml": "^2.8"
-            },
-            "suggest": {
-                "ext-curl": "*",
-                "monolog/monolog": "Allows for client-level logging and tracing"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Elasticsearch\\": "src/Elasticsearch/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Zachary Tong"
-                }
-            ],
-            "description": "PHP Client for Elasticsearch",
-            "keywords": [
-                "client",
-                "elasticsearch",
-                "search"
-            ],
-            "time": "2017-07-19T18:44:30+00:00"
-        },
-        {
-            "name": "graphaware/neo4j-bolt",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/graphaware/neo4j-bolt-php.git",
-                "reference": "78332d2b866383fda92dcca6233a33bfaf3b2d38"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/graphaware/neo4j-bolt-php/zipball/78332d2b866383fda92dcca6233a33bfaf3b2d38",
-                "reference": "78332d2b866383fda92dcca6233a33bfaf3b2d38",
-                "shasum": ""
-            },
-            "require": {
-                "graphaware/neo4j-common": "^2.0",
-                "myclabs/php-enum": "^1.4",
-                "symfony/event-dispatcher": "^2.7|^3.0"
-            },
-            "require-dev": {
-                "behat/behat": "~3.0.4",
-                "phpunit/phpunit": "^4.8",
-                "symfony/stopwatch": "^2.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "GraphAware\\Bolt\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christophe Willemsen",
-                    "email": "christophe@graphaware.com"
-                }
-            ],
-            "description": "Neo4j Bolt Binary Protocol PHP Driver",
-            "time": "2016-04-21T11:57:11+00:00"
-        },
-        {
-            "name": "graphaware/neo4j-common",
-            "version": "2.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/graphaware/neo4j-php-commons.git",
-                "reference": "ed3eafedb5923bea7e8b15c71d0f5a860aed0b4e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/graphaware/neo4j-php-commons/zipball/ed3eafedb5923bea7e8b15c71d0f5a860aed0b4e",
-                "reference": "ed3eafedb5923bea7e8b15c71d0f5a860aed0b4e",
-                "shasum": ""
-            },
-            "require": {
-                "myclabs/php-enum": "^1.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "GraphAware\\Common\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "ApacheV2"
-            ],
-            "authors": [
-                {
-                    "name": "Christophe Willemsen",
-                    "email": "christophe@graphaware.com"
-                }
-            ],
-            "description": "Common Utilities library for Neo4j",
-            "keywords": [
-                "cypher",
-                "database",
-                "graph",
-                "neo4j",
-                "statement"
-            ],
-            "time": "2016-05-06T15:11:19+00:00"
-        },
-        {
-            "name": "graphaware/neo4j-php-client",
-            "version": "4.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/graphaware/neo4j-php-client.git",
-                "reference": "0ee055fc124a453f893997adab5947ec33a9c462"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/graphaware/neo4j-php-client/zipball/0ee055fc124a453f893997adab5947ec33a9c462",
-                "reference": "0ee055fc124a453f893997adab5947ec33a9c462",
-                "shasum": ""
-            },
-            "require": {
-                "graphaware/neo4j-bolt": "^1.0",
-                "graphaware/neo4j-common": "^2.0",
-                "guzzlehttp/guzzle": "^6.0",
-                "myclabs/php-enum": "^1.4",
-                "php": ">= 5.6",
-                "symfony/event-dispatcher": "^2.7|^3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*",
-                "symfony/stopwatch": "^3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "GraphAware\\Neo4j\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christophe Willemsen",
-                    "email": "christophe@graphaware.com"
-                }
-            ],
-            "description": "Neo4j-PHP-Client is the most advanced PHP Client for Neo4j",
-            "homepage": "http://graphaware.com",
-            "keywords": [
-                "bolt",
-                "client",
-                "cluster",
-                "database",
-                "graph",
-                "high-availibility",
-                "http",
-                "neo4j"
-            ],
-            "time": "2016-05-06T16:12:05+00:00"
-        },
-        {
             "name": "guzzlehttp/guzzle",
             "version": "6.3.0",
             "source": {
@@ -979,107 +779,6 @@
                 "url"
             ],
             "time": "2017-03-20T17:10:46+00:00"
-        },
-        {
-            "name": "guzzlehttp/ringphp",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/RingPHP.git",
-                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
-                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/streams": "~3.0",
-                "php": ">=5.4.0",
-                "react/promise": "~2.0"
-            },
-            "require-dev": {
-                "ext-curl": "*",
-                "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "ext-curl": "Guzzle will use specific adapters if cURL is present"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Ring\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
-            "time": "2015-05-20T03:37:09+00:00"
-        },
-        {
-            "name": "guzzlehttp/streams",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/streams.git",
-                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/streams/zipball/47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
-                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Stream\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Provides a simple abstraction over streams of data",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "Guzzle",
-                "stream"
-            ],
-            "time": "2014-10-12T19:18:40+00:00"
         },
         {
             "name": "illuminate/html",
@@ -1385,6 +1084,81 @@
                 "solve"
             ],
             "time": "2016-03-02T22:35:41+00:00"
+        },
+        {
+            "name": "kevinrob/guzzle-cache-middleware",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kevinrob/guzzle-cache-middleware.git",
+                "reference": "6952064f7747756b0be7b4c234c0fd7535ea4c8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kevinrob/guzzle-cache-middleware/zipball/6952064f7747756b0be7b4c234c0fd7535ea4c8c",
+                "reference": "6952064f7747756b0be7b4c234c0fd7535ea4c8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "cache/array-adapter": "^0.4",
+                "doctrine/cache": "^1.0",
+                "guzzlehttp/guzzle": "^6.0",
+                "illuminate/cache": "^5.0",
+                "league/flysystem": "^1.0",
+                "phpunit/phpunit": "^4.0 || ^5.0",
+                "psr/cache": "^1.0"
+            },
+            "suggest": {
+                "doctrine/cache": "This library have a lot of ready-to-use cache storage (to be use with Kevinrob\\GuzzleCache\\Storage\\DoctrineCacheStorage)",
+                "guzzlehttp/guzzle": "For using this library. It was created for Guzzle6. (but you can use it with any PSR-7 HTTP Client)",
+                "laravel/framework": "To be use with Kevinrob\\GuzzleCache\\Storage\\LaravelCacheStorage",
+                "league/flysystem": "To be use with Kevinrob\\GuzzleCache\\Storage\\FlysystemStorage",
+                "psr/cache": "To be use with Kevinrob\\GuzzleCache\\Storage\\Psr6CacheStorage"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kevinrob\\GuzzleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Robatel",
+                    "email": "kevinrob2@gmail.com",
+                    "homepage": "https://github.com/Kevinrob"
+                }
+            ],
+            "description": "A HTTP/1.1 Cache for Guzzle 6. It's a simple Middleware to be added in the HandlerStack. (RFC 7234)",
+            "homepage": "https://github.com/Kevinrob/guzzle-cache-middleware",
+            "keywords": [
+                "Etag",
+                "Flysystem",
+                "Guzzle",
+                "cache",
+                "cache-control",
+                "doctrine",
+                "expiration",
+                "guzzle6",
+                "handler",
+                "http",
+                "http 1.1",
+                "middleware",
+                "performance",
+                "php",
+                "promise",
+                "psr6",
+                "psr7",
+                "rfc7234",
+                "validation"
+            ],
+            "time": "2017-08-17T12:23:43+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1774,50 +1548,6 @@
             "time": "2017-01-23T04:29:33+00:00"
         },
         {
-            "name": "myclabs/php-enum",
-            "version": "1.5.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/myclabs/php-enum.git",
-                "reference": "3ed7088cfd0a0e06534b7f8b0eee82acea574fac"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/php-enum/zipball/3ed7088cfd0a0e06534b7f8b0eee82acea574fac",
-                "reference": "3ed7088cfd0a0e06534b7f8b0eee82acea574fac",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.35|^5.7|^6.0",
-                "squizlabs/php_codesniffer": "1.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MyCLabs\\Enum\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP Enum contributors",
-                    "homepage": "https://github.com/myclabs/php-enum/graphs/contributors"
-                }
-            ],
-            "description": "PHP Enum implementation",
-            "homepage": "http://github.com/myclabs/php-enum",
-            "keywords": [
-                "enum"
-            ],
-            "time": "2017-06-28T16:24:08+00:00"
-        },
-        {
             "name": "nesbot/carbon",
             "version": "1.22.1",
             "source": {
@@ -1968,6 +1698,194 @@
                 "random"
             ],
             "time": "2017-03-13T16:27:32+00:00"
+        },
+        {
+            "name": "php-tmdb/api",
+            "version": "v2.1.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-tmdb/api.git",
+                "reference": "2a271343f6a25499f250638fbbd0b1eb79a87e2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-tmdb/api/zipball/2a271343f6a25499f250638fbbd0b1eb79a87e2a",
+                "reference": "2a271343f6a25499f250638fbbd0b1eb79a87e2a",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/cache": "^1.6",
+                "ext-curl": "*",
+                "guzzlehttp/guzzle": "~6.0",
+                "kevinrob/guzzle-cache-middleware": "^1.2 || ^2.0",
+                "php": ">=5.6.0",
+                "psr/log": "~1.0",
+                "rtheunissen/guzzle-log-middleware": "^0.4.0",
+                "symfony/event-dispatcher": ">=2.4,<5",
+                "symfony/options-resolver": ">=2.6,<5"
+            },
+            "require-dev": {
+                "monolog/monolog": ">=1.11.0",
+                "phpunit/phpunit": ">=5.7,<6"
+            },
+            "suggest": {
+                "monolog/monolog": "Required if you want to make use of logging features."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tmdb\\": "lib/Tmdb"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Roterman",
+                    "email": "michael@wtfz.net",
+                    "homepage": "http://wtfz.net"
+                }
+            ],
+            "description": "PHP wrapper for TMDB (TheMovieDatabase) API v3. Supports two types of approaches, one modelled with repositories, models and factories. And the other by simple array access to RAW data from The Movie Database.",
+            "homepage": "https://github.com/wtfzdotnet/php-tmdb-api",
+            "keywords": [
+                "api",
+                "movie",
+                "php",
+                "tmdb",
+                "tv",
+                "tv show",
+                "tvdb",
+                "wrapper"
+            ],
+            "time": "2018-01-20T18:33:44+00:00"
+        },
+        {
+            "name": "php-tmdb/laravel",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-tmdb/laravel.git",
+                "reference": "12924a77d9ba631045e23b8ffbbba414ee003ce2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-tmdb/laravel/zipball/12924a77d9ba631045e23b8ffbbba414ee003ce2",
+                "reference": "12924a77d9ba631045e23b8ffbbba414ee003ce2",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0 || ~4.0",
+                "php": ">=5.4.0",
+                "php-tmdb/api": "~2.0"
+            },
+            "require-dev": {
+                "doctrine/cache": ">=1.3.0",
+                "illuminate/events": "~5.0",
+                "monolog/monolog": ">=1.7.0",
+                "phpunit/phpunit": "~4.5",
+                "symfony/event-dispatcher": "~2.8|~3.0"
+            },
+            "suggest": {
+                "doctrine/cache": "Required if you want to make use of caching features.",
+                "monolog/monolog": "Required if you want to make use of logging features."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tmdb\\Laravel\\TmdbServiceProviderLaravel5"
+                    ],
+                    "aliases": {
+                        "Tmdb": "Tmdb\\Laravel\\Facades\\Tmdb"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tmdb\\Laravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Redeman",
+                    "email": "markredeman@gmail.com"
+                }
+            ],
+            "description": "Laravel Package for TMDB ( The Movie Database ) API. Provides easy access to the wtfzdotnet/php-tmdb-api library.",
+            "keywords": [
+                "api",
+                "laravel",
+                "movie",
+                "php",
+                "tmdb",
+                "tv",
+                "tv show",
+                "tvdb",
+                "wrapper"
+            ],
+            "time": "2017-09-07T21:45:05+00:00"
+        },
+        {
+            "name": "predis/predis",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete Redis client for PHP and HHVM",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2016-06-16T16:22:20+00:00"
         },
         {
             "name": "psr/http-message",
@@ -2222,33 +2140,36 @@
             "time": "2017-03-26T20:37:53+00:00"
         },
         {
-            "name": "react/promise",
-            "version": "v2.5.1",
+            "name": "rtheunissen/guzzle-log-middleware",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/reactphp/promise.git",
-                "reference": "62785ae604c8d69725d693eb370e1d67e94c4053"
+                "url": "https://github.com/rtheunissen/guzzle-log-middleware.git",
+                "reference": "202f474456e5b4a62c09a91054b3942cab48ad74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/62785ae604c8d69725d693eb370e1d67e94c4053",
-                "reference": "62785ae604c8d69725d693eb370e1d67e94c4053",
+                "url": "https://api.github.com/repos/rtheunissen/guzzle-log-middleware/zipball/202f474456e5b4a62c09a91054b3942cab48ad74",
+                "reference": "202f474456e5b4a62c09a91054b3942cab48ad74",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "guzzlehttp/guzzle": "~6.0",
+                "php": ">=5.5",
+                "psr/log": "~1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8"
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "~4.6"
+            },
+            "suggest": {
+                "monolog/monolog": "Recommended PSR-3 logger"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "React\\Promise\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
+                    "Concat\\Http\\Middleware\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2256,16 +2177,19 @@
             ],
             "authors": [
                 {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com"
+                    "name": "Rudi Theunissen",
+                    "email": "rudolf.theunissen@gmail.com"
                 }
             ],
-            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "description": "Guzzle middleware to log requests and responses",
             "keywords": [
-                "promise",
-                "promises"
+                "Guzzle",
+                "http",
+                "log",
+                "middleware",
+                "psr7"
             ],
-            "time": "2017-03-25T12:08:31+00:00"
+            "time": "2017-11-06T19:17:52+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2685,6 +2609,60 @@
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
             "time": "2017-01-28T02:53:17+00:00"
+        },
+        {
+            "name": "symfony/options-resolver",
+            "version": "v3.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/options-resolver.git",
+                "reference": "f3109a6aedd20e35c3a33190e932c2b063b7b50e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/f3109a6aedd20e35c3a33190e932c2b063b7b50e",
+                "reference": "f3109a6aedd20e35c3a33190e932c2b063b7b50e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\OptionsResolver\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony OptionsResolver Component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "config",
+                "configuration",
+                "options"
+            ],
+            "time": "2018-01-11T07:56:07+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -3211,6 +3189,61 @@
             "time": "2015-06-14T21:17:01+00:00"
         },
         {
+            "name": "elasticsearch/elasticsearch",
+            "version": "v5.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elastic/elasticsearch-php.git",
+                "reference": "50e5b1c63db68839b8acc1f4766769570a27a448"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/50e5b1c63db68839b8acc1f4766769570a27a448",
+                "reference": "50e5b1c63db68839b8acc1f4766769570a27a448",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/ringphp": "~1.0",
+                "php": "^5.6|^7.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "cpliakas/git-wrapper": "~1.0",
+                "doctrine/inflector": "^1.1",
+                "mockery/mockery": "0.9.4",
+                "phpunit/phpunit": "^4.7|^5.4",
+                "sami/sami": "~3.2",
+                "symfony/finder": "^2.8",
+                "symfony/yaml": "^2.8"
+            },
+            "suggest": {
+                "ext-curl": "*",
+                "monolog/monolog": "Allows for client-level logging and tracing"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Elasticsearch\\": "src/Elasticsearch/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Zachary Tong"
+                }
+            ],
+            "description": "PHP Client for Elasticsearch",
+            "keywords": [
+                "client",
+                "elasticsearch",
+                "search"
+            ],
+            "time": "2017-07-19T18:44:30+00:00"
+        },
+        {
             "name": "fzaninotto/faker",
             "version": "v1.6.0",
             "source": {
@@ -3257,6 +3290,252 @@
                 "fixtures"
             ],
             "time": "2016-04-29T12:21:54+00:00"
+        },
+        {
+            "name": "graphaware/neo4j-bolt",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/graphaware/neo4j-bolt-php.git",
+                "reference": "78332d2b866383fda92dcca6233a33bfaf3b2d38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/graphaware/neo4j-bolt-php/zipball/78332d2b866383fda92dcca6233a33bfaf3b2d38",
+                "reference": "78332d2b866383fda92dcca6233a33bfaf3b2d38",
+                "shasum": ""
+            },
+            "require": {
+                "graphaware/neo4j-common": "^2.0",
+                "myclabs/php-enum": "^1.4",
+                "symfony/event-dispatcher": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "behat/behat": "~3.0.4",
+                "phpunit/phpunit": "^4.8",
+                "symfony/stopwatch": "^2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GraphAware\\Bolt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Willemsen",
+                    "email": "christophe@graphaware.com"
+                }
+            ],
+            "description": "Neo4j Bolt Binary Protocol PHP Driver",
+            "time": "2016-04-21T11:57:11+00:00"
+        },
+        {
+            "name": "graphaware/neo4j-common",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/graphaware/neo4j-php-commons.git",
+                "reference": "ed3eafedb5923bea7e8b15c71d0f5a860aed0b4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/graphaware/neo4j-php-commons/zipball/ed3eafedb5923bea7e8b15c71d0f5a860aed0b4e",
+                "reference": "ed3eafedb5923bea7e8b15c71d0f5a860aed0b4e",
+                "shasum": ""
+            },
+            "require": {
+                "myclabs/php-enum": "^1.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GraphAware\\Common\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "ApacheV2"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Willemsen",
+                    "email": "christophe@graphaware.com"
+                }
+            ],
+            "description": "Common Utilities library for Neo4j",
+            "keywords": [
+                "cypher",
+                "database",
+                "graph",
+                "neo4j",
+                "statement"
+            ],
+            "time": "2016-05-06T15:11:19+00:00"
+        },
+        {
+            "name": "graphaware/neo4j-php-client",
+            "version": "4.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/graphaware/neo4j-php-client.git",
+                "reference": "0ee055fc124a453f893997adab5947ec33a9c462"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/graphaware/neo4j-php-client/zipball/0ee055fc124a453f893997adab5947ec33a9c462",
+                "reference": "0ee055fc124a453f893997adab5947ec33a9c462",
+                "shasum": ""
+            },
+            "require": {
+                "graphaware/neo4j-bolt": "^1.0",
+                "graphaware/neo4j-common": "^2.0",
+                "guzzlehttp/guzzle": "^6.0",
+                "myclabs/php-enum": "^1.4",
+                "php": ">= 5.6",
+                "symfony/event-dispatcher": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "symfony/stopwatch": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GraphAware\\Neo4j\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Willemsen",
+                    "email": "christophe@graphaware.com"
+                }
+            ],
+            "description": "Neo4j-PHP-Client is the most advanced PHP Client for Neo4j",
+            "homepage": "http://graphaware.com",
+            "keywords": [
+                "bolt",
+                "client",
+                "cluster",
+                "database",
+                "graph",
+                "high-availibility",
+                "http",
+                "neo4j"
+            ],
+            "time": "2016-05-06T16:12:05+00:00"
+        },
+        {
+            "name": "guzzlehttp/ringphp",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/RingPHP.git",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/streams": "~3.0",
+                "php": ">=5.4.0",
+                "react/promise": "~2.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Ring\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
+            "time": "2015-05-20T03:37:09+00:00"
+        },
+        {
+            "name": "guzzlehttp/streams",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/streams.git",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple abstraction over streams of data",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "time": "2014-10-12T19:18:40+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -3409,6 +3688,50 @@
                 "object graph"
             ],
             "time": "2017-04-12T18:52:22+00:00"
+        },
+        {
+            "name": "myclabs/php-enum",
+            "version": "1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/myclabs/php-enum.git",
+                "reference": "3ed7088cfd0a0e06534b7f8b0eee82acea574fac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/myclabs/php-enum/zipball/3ed7088cfd0a0e06534b7f8b0eee82acea574fac",
+                "reference": "3ed7088cfd0a0e06534b7f8b0eee82acea574fac",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35|^5.7|^6.0",
+                "squizlabs/php_codesniffer": "1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MyCLabs\\Enum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP Enum contributors",
+                    "homepage": "https://github.com/myclabs/php-enum/graphs/contributors"
+                }
+            ],
+            "description": "PHP Enum implementation",
+            "homepage": "http://github.com/myclabs/php-enum",
+            "keywords": [
+                "enum"
+            ],
+            "time": "2017-06-28T16:24:08+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -4008,6 +4331,52 @@
                 "xunit"
             ],
             "time": "2017-06-30T09:13:00+00:00"
+        },
+        {
+            "name": "react/promise",
+            "version": "v2.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "62785ae604c8d69725d693eb370e1d67e94c4053"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/62785ae604c8d69725d693eb370e1d67e94c4053",
+                "reference": "62785ae604c8d69725d693eb370e1d67e94c4053",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "keywords": [
+                "promise",
+                "promises"
+            ],
+            "time": "2017-03-25T12:08:31+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -4739,13 +5108,11 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "graphaware/neo4j-php-client": 15
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.6.4"
+        "php": "5.6.34"
     },
     "platform-dev": []
 }

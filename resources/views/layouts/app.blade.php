@@ -30,7 +30,7 @@ window.Laravel = <?php echo json_encode([
 </head>
 <body>
 <div id="app">
-<nav class="hd navbar navbar-default navbar-static-top">
+<nav class="transition hd show navbar navbar-default navbar-static-top">
 <div class="container">
 <div class="navbar-header">
 
@@ -49,7 +49,7 @@ Nanashi
 
 </div>
 
-<div class="hd collapse navbar-collapse" id="app-navbar-collapse">
+<div class="collapse navbar-collapse" id="app-navbar-collapse">
 <ul class="nav navbar-nav">
 &nbsp;
 
@@ -196,5 +196,22 @@ Nanashi
 </div>
 <!-- Scripts -->
 <script src="/js/app.js"></script>
+<script>
+    $('.hd').hover(function () {
+        $('.hd').removeClass('show');
+    }, function () {
+        $('.hd').addClass('show');
+    });
+
+
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 100 ){
+            $('.hd').removeClass('show');
+        } else {
+            $('.hd').addClass('show');
+        };
+    });
+</script>
 </body>
 </html>

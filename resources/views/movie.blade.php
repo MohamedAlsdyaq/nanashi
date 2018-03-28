@@ -20,7 +20,7 @@
 
 </head>
 
-<div class="page">
+<div class="">
 <div id="backdrop" class=" col-sm-12 landing">
 </div>
 

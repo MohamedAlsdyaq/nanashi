@@ -27,18 +27,38 @@
                
                 <br><br>
          <div class="col-sm-12">
-            <h4>Upcoming</h4> 
+            <h4>Trending </h4>
             <hr class="hr_no_margin">
 
-            <div id="upcoming"></div>
+            <div id="">
+                @foreach($trendings as $trending)
+
+        <div class="custom_card"><a href="/movie/{{ $trending['id'] }} ">
+            <img width="120" height="200" src="http://image.tmdb.org/t/p/w500{{$trending['poster_path']}}">
+                    </a>
+
+            <h5 class="text-center"><small>{{$trending['original_title']}}<small><h5></a></div>
+
+                @endforeach
+            </div>
 
         </div> 
   <br><br>
          <div class="col-sm-12">
-            <h4>Highest Rated Movies</h4> 
+            <h4>Recently Viewed</h4>
             <hr class="hr_no_margin">
 
-            <div id="rated"></div>
+            <div id="">
+                @foreach($recents as $recent)
+
+                    <div class="custom_card"><a href="/movie/{{ $recent['id'] }} ">
+                            <img width="120" height="200" src="http://image.tmdb.org/t/p/w500{{$recent['poster_path']}}">
+                        </a>
+
+                        <h5 class="text-center"><small>{{$recent['original_title']}}<small><h5></a></div>
+
+                @endforeach
+            </div>
 
         </div> 
 
@@ -50,7 +70,7 @@
            
             
              <div class="panel panel-default">
-                <div class="panel-heading">Categories </div>
+                <div class="title text-center panel-heading">Categories </div>
                 <hr class="hr_no_margin">     
             <div class="panel-body"> 
 

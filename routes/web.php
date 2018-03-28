@@ -50,7 +50,7 @@ Route::resource('/friend', 'FriendController');
 Route::post('/delete_friend', 'FriendController@destroy');
 
 Route::get('/search',['uses' => 'MovieController@Search','as' => 'search']);
-Route::get('/toto','MovieController@LatestUpdates');
+Route::get('/recent','MovieController@recent');
 
 //Route::get('/test', 'ListController@store');
 
