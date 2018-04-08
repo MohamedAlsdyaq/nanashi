@@ -49,6 +49,8 @@ class MovieController extends Controller
         $posts = $this->get_posts ( $id );
         $recommended = false;
         $id = (int)$id;
+
+        // @@ Add an item to Redis Trending set
         if($id > 0)
            Redis::zincrby ( 'Trending' , 1 , $id );
 
@@ -100,6 +102,7 @@ class MovieController extends Controller
     {
         return Redis::zrevrange ( 'Trending' , 1 , -1 );
     }
+
 
 
 }

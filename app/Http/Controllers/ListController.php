@@ -106,8 +106,16 @@ $list->save();
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public static function BlackList($id , $suggestions)
     {
-        //
+
+    }
+
+    public static function Filter( $id ){
+
+    }
+
+    public static function GetWatched( $id ){
+    return mList::where(['user_id' => $id, 'tag'=> 'completed'])->get();
     }
 }

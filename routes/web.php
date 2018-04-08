@@ -50,8 +50,8 @@ Route::resource('/friend', 'FriendController');
 Route::post('/delete_friend', 'FriendController@destroy');
 
 Route::get('/search',['uses' => 'MovieController@Search','as' => 'search']);
-Route::get('/recent','MovieController@recent');
+Route::get('/file','ModelController@OpenFile');
 
-//Route::get('/test', 'ListController@store');
+Route::get('/vogo', '/vendor/vogoo/install@execute');
 
 
